@@ -20,7 +20,7 @@ timeout(time: 600, unit: 'SECONDS') {
             node (label) {
                 stage('Git阶段'){
                     echo "Git 阶段"
-                    git branch: "master" ,changelog: true , url: "https://github.com/my-dlq/springboot-helloworld.git"
+                    git branch: "master" ,changelog: true , url: "https://github.com/my-dlq/test.git"
                 }
                 stage('Maven阶段'){
                     echo "Maven 阶段"
