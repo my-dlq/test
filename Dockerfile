@@ -1,4 +1,4 @@
-FROM adoptopenjdk:12.0.1_12-jre-openj9-0.14.1
+FROM openjdk:12.0.1-jdk-oraclelinux7 
 VOLUME /tmp
 COPY target/lib/ lib/
 ADD target/*.jar app.jar
