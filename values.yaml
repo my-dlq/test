@@ -11,7 +11,7 @@ resources:
     cpu: 500m
 
 #***java && app 环境变量设置
-env: 
+env:  
   # - name: "JAVA_OPTS"
   #   value: "-Xmx512M -Xms355M -Xss256k -Duser.timezone=Asia/Shanghai"
   - name: "APP_OPTS"
