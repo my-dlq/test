@@ -1,6 +1,6 @@
 FROM openjdk:12.0.1-jdk-oraclelinux7 
 VOLUME /tmp
-COPY target/lib/*.jar ./lib/
+ADD target/lib/*.jar ./lib/
 ADD target/*.jar app.jar
 RUN sh -c 'touch /app.jar'
 ENV JAVA_OPTS="-Duser.timezone=Asia/Shanghai"
