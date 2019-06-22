@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
+        <version>2.1.6.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -14,69 +14,37 @@
     <artifactId>springboot-helloworld</artifactId>
     <version>0.0.1</version>
     <name>springboot-helloworld</name>
-    <description>This a project for Spring Boot , use docker build for helm</description>
+    <description>demo</description>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
+		<!--web-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!--actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+		<!--prometheus-->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
     </dependencies>
-    
+
 	<build>
-	    <plugins>
-	        <!--设置应用 Main 参数启动依赖查找的地址指向外部 lib 文件夹-->
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-jar-plugin</artifactId>
-	            <configuration>
-	                <archive>
-	                    <manifest>
-	                        <addClasspath>true</addClasspath>
-	                        <classpathPrefix>lib/</classpathPrefix>
-	                    </manifest>
-	                </archive>
-	            </configuration>
-	        </plugin>
-	        <!--设置 SpringBoot 打包插件不包含任何 Jar 依赖包-->
-	        <plugin>
-	            <groupId>org.springframework.boot</groupId>
-	            <artifactId>spring-boot-maven-plugin</artifactId>
-	            <configuration>
-	                 <includes>
-	                     <include>
-	                         <groupId>nothing</groupId>
-	                         <artifactId>nothing</artifactId>
-	                     </include>
-	                 </includes>
-	            </configuration>
-	        </plugin>
-	        <!--设置将 lib 拷贝到应用 Jar 外面-->
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-dependency-plugin</artifactId>
-	            <executions>
-	                <execution>
-	                    <id>copy-dependencies</id>
-	                    <phase>prepare-package</phase>
-	                    <goals>
-	                        <goal>copy-dependencies</goal>
-	                    </goals>
-	                    <configuration>
-	                        <outputDirectory>${project.build.directory}/lib</outputDirectory>
-	                    </configuration>
-	                </execution>
-	            </executions>
-	        </plugin>
-	    </plugins>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>

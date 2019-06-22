@@ -1,19 +1,14 @@
 server:
   port: 8080
-  tomcat:
-    basedir: "/"
     
 spring:
   application:
     name: springboot-helloworld
 
 management:
-  endpoint:
-    restart:
-      enabled: true
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "*"  #这里设置暴露出所有数据，如果只想暴露出 Prometheus 数据，可以设置为 "prometheus"
   server:
-    port: 8081
+    port: 8081    #指定监控数据端口为8081
