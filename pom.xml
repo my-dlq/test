@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>club.mydlq</groupId>
-    <artifactId>springboot-helloworld</artifactId>
+    <artifactId>springboot-prometheus-demo</artifactId>
     <version>0.0.1</version>
-    <name>springboot-helloworld</name>
+    <name>springboot-prometheus-demo</name>
     <description>demo</description>
 
     <properties>

@@ -3,7 +3,7 @@ server:
     
 spring:
   application:
-    name: springboot-helloworld
+    name: springboot-prometheus-demo
 
 management:
   endpoints:
