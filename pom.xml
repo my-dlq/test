@@ -12,7 +12,7 @@
 
     <groupId>club.mydlq</groupId>
     <artifactId>springboot-admin-k8s</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>springboot-admin-k8s</name>
     <description>demo</description>
 
