@@ -2,11 +2,6 @@ server:
   port: 8080
     
 spring:
-  boot:
-    admin:
-      monitor:
-        status-lifetime: 5000ms
-        read-timeout: 5000ms
   application:
     name: springboot-admin-k8s
   cloud:

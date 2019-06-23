@@ -6,13 +6,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.5.RELEASE</version>
+        <version>2.1.6.RELEASE</version>
         <relativePath/>
     </parent>
 
     <groupId>club.mydlq</groupId>
     <artifactId>springboot-admin-k8s</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.1</version>
     <name>springboot-admin-k8s</name>
     <description>demo</description>
 
