@@ -3,7 +3,13 @@ server:
     
 spring:
   application:
-    name: springboot-prometheus-demo
+    name: springboot-admin-k8s
+  cloud:
+    kubernetes:
+      discovery:
+        PrimaryPortName: 8081
+        serviceLabels:
+        - admin: true
 
 management:
   endpoints:
