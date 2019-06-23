@@ -13,7 +13,7 @@ spring:
     kubernetes:
       discovery:
         #PrimaryPortName: 8081
-        primaryPortName: 8081
+        primaryPortName: management
         serviceLabels:
           admin: enabled
 
