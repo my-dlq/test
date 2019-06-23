@@ -12,9 +12,9 @@ spring:
   cloud:
     kubernetes:
       discovery:
-        PrimaryPortName: 8081
+        #PrimaryPortName: 8081
         serviceLabels:
-        - admin: true
+          admin: enabled
 
 management:
   endpoints:
