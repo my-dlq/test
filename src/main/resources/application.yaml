@@ -4,12 +4,12 @@ server:
 spring:
   application:
     name: springboot-admin-k8s
-  cloud:
-    kubernetes:
-      discovery:
-        PrimaryPortName: 8081
-        serviceLabels:
-        - admin: true
+#  cloud:
+#    kubernetes:
+#      discovery:
+#        PrimaryPortName: 8081
+#        serviceLabels:
+#        - admin: true
 
 management:
   endpoints:
